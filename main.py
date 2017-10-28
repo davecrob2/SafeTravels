@@ -5,7 +5,7 @@ app=Flask(__name__)
 def hello():
 	if request.method == 'POST':
 		firstname=request.form['firstname']
-		return render_template('results.html')
+		return render_template('results.html',location=firstname)
 	else:
 		print "<h1>Hello</h1>"
 	return render_template('form.html')
