@@ -9,5 +9,10 @@ def hello():
 	else:
 		print "<h1>Hello</h1>"
 	return render_template('form.html')
+
+@app.route('/home')
+def home():
+	return render_template('index.html')
+	
 if __name__ == '__main__':
   app.run()
